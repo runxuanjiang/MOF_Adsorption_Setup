@@ -1,0 +1,9 @@
+tolerance 1.0
+filetype pdb
+
+output STEP2_XX_reservoir_BOX_1.pdb
+
+structure ../pdb/FULL_NAME.pdb 
+  number RRR
+  inside box 1. 1. 1. BBS. BBS. BBS.
+end structure

@@ -1,0 +1,87 @@
+* Parameter file for GO-MC
+* Parameters include TraPPE-UA with Fluoroalkane expansions;
+* plus '89 work by Panagiotopolous on noble gases. 
+*
+* Mie potentials, TraPPE 4 alkene dihedral, and Fluoroalkane
+* power series constants are in separate "exotic" config file.
+*
+* Latest edit: 7/8/2013
+*
+*
+
+BONDS
+!
+!V(bond) = Kb(b - b0)**2
+!
+!Kb: kcal/mole/A**2 
+!b0: A
+!
+! Kb (kcal/mol) = Kb (K) * Boltz. const.; (9999999999 if no stretching)
+!
+!atom type     Kb              b0        description
+CH3 CH2        9999999999      1.540   ! TraPPE 1
+CH2 CH2        9999999999      1.540   ! TraPPE 2
+CY1 CYT        9999999999      1.210   ! QM alkynes
+CYT CYT        9999999999      1.210   ! QM alkynes
+CY1 CY1        9999999999      1.210   ! QM alkynes
+CH2 CYT        9999999999      1.460   ! QM alkynes
+CH3 CYT        9999999999      1.460   ! QM alkynes
+
+
+ANGLES
+!
+!V(angle) = Ktheta(Theta - Theta0)**2
+!
+!V(Urey-Bradley) = Kub(S - S0)**2
+!
+!Ktheta: kcal/mole/rad**2
+!Theta0: degrees
+!Kub: kcal/mole/A**2 (Urey-Bradley)
+!S0: A
+!
+! Ktheta (kcal/mol) = Ktheta (K) * Boltz. const.
+!
+!atom types         Ktheta       Theta0   Kub(?)  S0(?)
+CH3 CH2 CH2         31250        114.00 ! TraPPE 1
+CH2 CH2 CH2         31250        114.00 ! TraPPE 1
+CH3 CYT CY1         99999999999  180.00 ! ALKYNE propyne
+CH2 CYT CY1         99999999999  179.999 ! ALKYNE 1-butyne
+CH3 CYT CYT         99999999999  179.999 ! ALKYNE 2-butyne
+CH2 CYT CYT         99999999999  179.999 ! ALKYNE 3-hexyne
+CH3 CH2 CYT         32915        112.00 ! QM  1-butyne
+CH2 CH2 CYT         32915        112.00 ! QM  1-hexyne
+
+DIHEDRALS
+!
+!V(dihedral) = Kchi(1 + cos(n(chi) - delta))
+!
+!Kchi: kcal/mole
+!n: multiplicity
+!delta: degrees
+!
+! Kchi (kcal/mol) = Kchi (K) * Boltz. const.
+!
+!atom types         Kchi        n    delta              description
+CH3 CH2 CYT CY1       0.000000    0      0.0              ! Alkyne 1-butyne
+CH2 CH2 CYT CY1       0.000000    0      0.0              ! Alkyne 1-hexyne
+CH2 CH2 CYT CYT       0.000000    0      0.0              ! Alkyne 2-hexyne
+CH3 CYT CYT CH3       0.000000    0      0.0              ! Alkyne 2-butyne
+CH2 CYT CYT CH3       0.000000    0      0.0              ! Alkyne 2-hexyne
+
+CH3 CH2 CH2 CH2     506.400000    1      0.0              ! QM Alkyne 1-HEXYNE
+CH3 CH2 CH2 CH2    -307.500000    2    180.0              ! QM Alkyne 1-HEXYNE
+CH3 CH2 CH2 CH2     886.000000    3      0.0              ! QM Alkyne 1-HEXYNE
+X   CH2 CH2 CYT      94.880000    0      0.0              ! QM Alkyne 1-HEXYNE
+X   CH2 CH2 CYT     162.000000    1      0.0              ! QM Alkyne 1-HEXYNE
+X   CH2 CH2 CYT    -205.400000    2    180.0              ! QM Alkyne 1-HEXYNE
+X   CH2 CH2 CYT     980.400000    3      0.0              ! QM Alkyne 1-HEXYNE
+
+NONBONDED_MIE
+!
+!V(mie) = 4*eps*((sig_ij/r_ij)^n-(sig_ij/r_ij)^6)
+!
+!atom   eps          sig_ij     n    description
+CH3     121.25       3.783      16   ! Potoff, et al. '09
+CH2      61.00       3.990      16   ! Potoff, et al. '09
+CY1     148.50       3.570      28   ! Fit to Ethyne
+CYT     EEE_EE       S_SSS      NN   ! Alkyne  

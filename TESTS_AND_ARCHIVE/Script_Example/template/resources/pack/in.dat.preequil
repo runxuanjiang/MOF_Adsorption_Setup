@@ -1,0 +1,145 @@
+########################
+## Init File 
+## 
+## IMPROVEMENTS
+## - Compacts inputs into one line
+## - Suggestion: edit inline with (insert key)
+##
+## To-Do 
+## (make editor + XML version)
+########################
+
+############################################################################
+#  ========-------------------- INPUT --------------------------===========
+############################################################################
+
+#########################
+# enable, step
+#########################
+Restart	 	false   
+
+####################################
+# kind {RESTART, RANDOM, INTSEED}
+####################################
+PRNG     	RANDOM
+
+####################################
+# FORCE FIELD
+####################################
+ParaTypeEXOTIC	 true
+Parameters     	 Par_MODEL_NAME.inp
+
+####################################
+# INPUT PDB FILES
+####################################
+Coordinates 0  STEP3_START_XX_PHA_BOX_0.pdb 
+Coordinates 1  STEP3_START_XX_reservoir_BOX_1.pdb	
+
+####################################
+# INPUT PSF FILES
+####################################
+Structure 0  STEP3_START_XX_PHA_BOX_0.psf
+Structure 1  STEP3_START_XX_reservoir_BOX_1.psf	
+
+
+
+############################################################################
+#  =======--------------------- SYSTEM --------------------------===========
+############################################################################
+
+##################################
+# GEMC TYPE (DEFULT IS NVT_GEMC)  
+##################################
+
+
+#############################
+# SIMULATION CONDITION   
+#############################
+Temperature     TTT.00
+Potential       VDW 
+LRC		true
+Rcut		10   
+Exclude 	1-4 
+
+#############################
+# ELECTROSTATIC   
+#############################
+Ewald		false
+ElectroStatic   false
+
+
+################################
+# STEPS 
+################################
+RunSteps           1500000      
+EqSteps		   500000       
+AdjSteps	   1000        
+
+################################
+# MOVE FREQUENCY              
+################################
+DisFreq               0.70  
+RotFreq		      0.10   
+SwapFreq	      0.00
+IntraSwapFreq	      0.20
+
+################################
+# BOX DIMENSION #, X, Y, Z
+################################
+BoxDim  0    BBB.00  BBB.00  BBB.00
+BoxDim  1    BBB.00  BBB.00  BBB.00
+
+
+##############################
+# CBMC TRIALS
+##############################
+CBMC_First   10     
+CBMC_Nth     4
+CBMC_Ang     100
+CBMC_Dih     10
+
+####################################
+#          Mol. Name     Chem. Pot.
+####################################
+ChemPot    XX             -CPCP
+
+
+
+############################################################################
+#  =======-------------------- OUTPUT --------------------------===========
+############################################################################
+
+##########################
+# statistics filename add
+##########################
+OutputName  T_TTT_K_u_CPCP_rAA_PPP
+
+#####################################
+# enable, frequency           
+#####################################
+CoordinatesFreq    true   1000000
+RestartFreq  	   true   1000000
+ConsoleFreq        true   100000
+BlockAverageFreq   false   100000
+FluctuationFreq    false   10000
+HistogramFreq      false   100000
+
+
+################################
+# OutHistSettings
+################################
+DistName	 dis
+HistName	 his
+RunNumber	 RNN
+RunLetter	 RLL
+SampleFreq	 200
+
+##################################
+# enable: blk avg., fluct., hist.
+##################################
+OutEnergy         false    false    false
+OutPressure       false    false    false  
+OutMolNum         false    false    false
+OutAcceptAngles   false    false    false  
+OutDensity        false    false    false
+

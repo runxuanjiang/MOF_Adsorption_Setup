@@ -1,0 +1,371 @@
+*
+* Custom top file -- alkanes & noble
+*
+36  1
+
+!
+!
+!
+MASS   1  CH4    16.043 C  ! Potoff '09 Mie
+MASS   2  CH3    15.035 C  !
+MASS   3  CH2    14.027 C  !
+MASS   4  CH1    13.019 C  !
+MASS   5  CT     12.011 C  !
+MASS   6  CYT    12.011 C  !
+MASS   7  CE2    14.027 C  ! Potoff alkene
+MASS   8  CE1    13.019 C  !
+MASS   9  CY1    13.019 C  !
+MASS  10  HE      4.003 HE ! Potoff Mie noble gases
+MASS  11  NE     20.180 NE !
+MASS  12  AR     39.948 AR !
+MASS  13  KR     83.798 KR !
+MASS  14  XE    131.293 XE !Potoff Mie noble gases
+MASS  15  RN    222.000 RN !
+
+
+DEFA FIRS none LAST none
+AUTOGENERATE ANGLES DIHEDRALS
+
+
+RESI HE          0.00 ! helium - Mie
+GROUP
+ATOM HE  HE     0.00 !  *
+PATCHING FIRS NONE LAST NONE
+
+RESI NE          0.00 ! neon - Mie
+GROUP
+ATOM NE  NE     0.00 !  *
+PATCHING FIRS NONE LAST NONE
+
+RESI AR          0.00 ! argon - Mie
+GROUP
+ATOM AR  AR     0.00 !  *
+PATCHING FIRS NONE LAST NONE
+
+RESI KR          0.00 ! krypton - Mie
+GROUP
+ATOM KR  KR     0.00 !  *
+PATCHING FIRS NONE LAST NONE
+
+RESI XE          0.00 ! xenon - Mie
+GROUP
+ATOM XE  XE     0.00 !  *
+PATCHING FIRS NONE LAST NONE
+
+RESI RN          0.00 ! radon - Mie
+GROUP
+ATOM RN  RN     0.00 !  *
+PATCHING FIRS NONE LAST NONE
+
+RESI C1P        0.00 ! methane - Potoff
+GROUP
+ATOM C1 CH4     0.00 !  *
+PATCHING FIRS NONE LAST NONE
+
+RESI C2P        0.00 ! ethane - Potoff
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CH3     0.00 !  *
+BOND C1 C2
+PATCHING FIRS NONE LAST NONE
+
+RESI C2E        0.00 ! ethene - Potoff
+GROUP
+ATOM C1 CE2     0.00 !  *
+ATOM C2 CE2     0.00 !  *
+BOND C1 C2
+PATCHING FIRS NONE LAST NONE
+
+RESI C2Y        0.00 ! ethyne - Potoff
+GROUP
+ATOM C1 CY1     0.00 !  *
+ATOM C2 CY1     0.00 !  *
+BOND C1 C2
+PATCHING FIRS NONE LAST NONE
+
+RESI C3P        0.00 ! perfluropropane - Potoff
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CH2     0.00 !  *
+ATOM C3 CH3     0.00 !  *
+BOND C1 C2 C2 C3
+PATCHING FIRS NONE LAST NONE
+
+RESI C3E        0.00 ! Propene - Potoff
+GROUP
+ATOM C1 CE2     0.00 !  *
+ATOM C2 CE1     0.00 !  *
+ATOM C3 CH3     0.00 !  *
+BOND C1 C2 C2 C3
+PATCHING FIRS NONE LAST NONE
+
+RESI C3Y        0.00 ! Propyne - Potoff
+GROUP
+ATOM C1 CY1     0.00 !  *
+ATOM C2 CYT     0.00 !  *
+ATOM C3 CH3     0.00 !  *
+BOND C1 C2 C2 C3
+PATCHING FIRS NONE LAST NONE
+
+RESI C4P        0.00 ! n-butane - Potoff Mie
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CH2     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+PATCHING FIRS NONE LAST NONE
+
+RESI C4E        0.00 ! n-butene - Potoff Mie
+GROUP
+ATOM C1 CE2     0.00 !  *
+ATOM C2 CE1     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+PATCHING FIRS NONE LAST NONE
+
+RESI C4Y1       0.00 ! 1-butyne - Potoff Mie
+GROUP
+ATOM C1 CY1     0.00 !  *
+ATOM C2 CYT     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+PATCHING FIRS NONE LAST NONE
+
+RESI C4Y2       0.00 ! 2-butyne - Potoff Mie
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CYT     0.00 !  *
+ATOM C3 CYT     0.00 !  *
+ATOM C4 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+PATCHING FIRS NONE LAST NONE
+
+
+RESI C5P        0.00 ! pentane
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CH2     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5
+PATCHING FIRS NONE LAST NONE
+
+RESI C5Y1       0.00 ! 1-pentyne
+GROUP
+ATOM C1 CY1     0.00 !  *
+ATOM C2 CYT     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5
+PATCHING FIRS NONE LAST NONE
+
+RESI C5Y2       0.00 ! 2-pentyne
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CYT     0.00 !  *
+ATOM C3 CYT     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5
+PATCHING FIRS NONE LAST NONE
+
+RESI C6P        0.00 ! hexane
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CH2     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH2     0.00 !  *
+ATOM C6 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6
+PATCHING FIRS NONE LAST NONE
+
+RESI C6E        0.00 ! hexene
+GROUP
+ATOM C1 CE2     0.00 !  *
+ATOM C2 CE1     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH2     0.00 !  *
+ATOM C6 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6
+PATCHING FIRS NONE LAST NONE
+
+RESI C6Y1       0.00 ! 1-hexyne
+GROUP
+ATOM C1 CY1     0.00 !  *
+ATOM C2 CYT     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH2     0.00 !  *
+ATOM C6 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6
+PATCHING FIRS NONE LAST NONE
+
+RESI C6Y2       0.00 ! 2-hexyne
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CYT     0.00 !  *
+ATOM C3 CYT     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH2     0.00 !  *
+ATOM C6 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6
+PATCHING FIRS NONE LAST NONE
+
+RESI C6Y3       0.00 ! 3-hexyne
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CH2     0.00 !  *
+ATOM C3 CYT     0.00 !  *
+ATOM C4 CYT     0.00 !  *
+ATOM C5 CH2     0.00 !  *
+ATOM C6 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6
+PATCHING FIRS NONE LAST NONE
+
+RESI C7P        0.00 ! heptane
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CH2     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH2     0.00 !  *
+ATOM C6 CH2     0.00 !  *
+ATOM C7 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6 C6 C7
+PATCHING FIRS NONE LAST NONE
+
+RESI C7Y1       0.00 ! 1-heptyne
+GROUP
+ATOM C1 CY1     0.00 !  *
+ATOM C2 CYT     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH2     0.00 !  *
+ATOM C6 CH2     0.00 !  *
+ATOM C7 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6 C6 C7
+PATCHING FIRS NONE LAST NONE
+
+RESI C7Y2       0.00 ! 2-heptyne
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CYT     0.00 !  *
+ATOM C3 CYT     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH2     0.00 !  *
+ATOM C6 CH2     0.00 !  *
+ATOM C7 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6 C6 C7
+PATCHING FIRS NONE LAST NONE
+
+RESI C7Y3       0.00 ! 3-heptyne
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CH2     0.00 !  *
+ATOM C3 CYT     0.00 !  *
+ATOM C4 CYT     0.00 !  *
+ATOM C5 CH2     0.00 !  *
+ATOM C6 CH2     0.00 !  *
+ATOM C7 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6 C6 C7
+PATCHING FIRS NONE LAST NONE
+
+RESI C8P        0.00 ! octane
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CH2     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH2     0.00 !  *
+ATOM C6 CH2     0.00 !  *
+ATOM C7 CH2     0.00 !  *
+ATOM C8 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6 C6 C7
+BOND C7 C8
+PATCHING FIRS NONE LAST NONE
+
+RESI C8Y1       0.00 ! 1-octyne
+GROUP
+ATOM C1 CY1     0.00 !  *
+ATOM C2 CYT     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH2     0.00 !  *
+ATOM C6 CH2     0.00 !  *
+ATOM C7 CH2     0.00 !  *
+ATOM C8 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6 C6 C7
+BOND C7 C8
+PATCHING FIRS NONE LAST NONE
+
+RESI C9P        0.00 ! nonane
+GROUP
+ATOM C1 CH3     0.00 !  *
+ATOM C2 CH2     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH2     0.00 !  *
+ATOM C6 CH2     0.00 !  *
+ATOM C7 CH2     0.00 !  *
+ATOM C8 CH2     0.00 !  *
+ATOM C9 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6 C6 C7
+BOND C7 C8 C8 C9
+PATCHING FIRS NONE LAST NONE
+
+RESI C9Y1       0.00 ! 1-nonyne
+GROUP
+ATOM C1 CY1     0.00 !  *
+ATOM C2 CYT     0.00 !  *
+ATOM C3 CH2     0.00 !  *
+ATOM C4 CH2     0.00 !  *
+ATOM C5 CH2     0.00 !  *
+ATOM C6 CH2     0.00 !  *
+ATOM C7 CH2     0.00 !  *
+ATOM C8 CH2     0.00 !  *
+ATOM C9 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6 C6 C7
+BOND C7 C8 C8 C9
+PATCHING FIRS NONE LAST NONE
+
+RESI C10        0.00 ! decane
+GROUP
+ATOM C1  CH3     0.00 !  *
+ATOM C2  CH2     0.00 !  *
+ATOM C3  CH2     0.00 !  *
+ATOM C4  CH2     0.00 !  *
+ATOM C5  CH2     0.00 !  *
+ATOM C6  CH2     0.00 !  *
+ATOM C7  CH2     0.00 !  *
+ATOM C8  CH2     0.00 !  *
+ATOM C9  CH2     0.00 !  *
+ATOM C10 CH3     0.00 !  *
+BOND C1 C2 C2 C3 C3 C4
+BOND C4 C5 C5 C6 C6 C7
+BOND C7 C8 C8 C9 C9 C10
+PATCHING FIRS NONE LAST NONE
+
+END

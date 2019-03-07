@@ -1,0 +1,13 @@
+#PBS -l ncpus=1
+#PBS -j oe
+#PBS -q wsuq
+#PBS -o /wsu/home/fj/fj23/fj2314/GCMC/Output
+#PBS -e /wsu/home/fj/fj23/fj2314/GCMC/Output
+
+echo Running on host `hostname`
+echo Time is `date`
+cd /wsu/home/fj/fj23/fj2314/GCMC/22DMPentane/RUN_DIR/
+echo Directory is `pwd`
+
+# Run job
+./MC_prog_icc_O3 > out_T_`grep Temperature in.dat | awk '{print $2}'`_K_GCMC_u_`grep ChemPot in.dat | awk '{print $3*-1}'`_r`grep OutHistSettings in.dat | awk '{print $4$5}'`

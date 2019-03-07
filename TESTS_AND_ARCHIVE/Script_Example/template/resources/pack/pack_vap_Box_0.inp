@@ -1,0 +1,9 @@
+tolerance 4.0
+filetype pdb
+
+output STEP2_XX_vap_BOX_0.pdb
+
+structure ../pdb/FULL_NAME.pdb 
+  number 2
+  inside box 1. 1. 1. BBS. BBS. BBS.
+end structure

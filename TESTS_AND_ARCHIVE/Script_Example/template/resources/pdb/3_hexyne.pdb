@@ -1,0 +1,9 @@
+REMARK   1 File created by GaussView 5.0.8
+HETATM    1   C1 C6Y3    1      -0.291   1.921   1.603                       C
+HETATM    2   C2 C6Y3    1      -0.275   0.524   0.937                       C
+HETATM    3   C3 C6Y3    1      -0.144  -0.551   2.022                       C
+HETATM    4   C4 C6Y3    1      -0.005  -1.430   2.926                       C
+HETATM    5   C5 C6Y3    1       0.163  -2.461   3.987                       C
+HETATM    6   C6 C6Y3    1       1.075  -3.566   3.421                       C
+END
+
